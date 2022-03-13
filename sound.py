@@ -48,7 +48,7 @@ def query_devices():
     options = {
         device.get("name"): index
         for index, device in enumerate(sd.query_devices())
-        if (device.get("max_input_channels") > 0 and device.get("hostapi") == DEFAULT)
+        if (device.get("max_input_channels") > 0)
     }
 
     if not options:
